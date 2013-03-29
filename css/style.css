@@ -1,0 +1,124 @@
+/*CONFIG - BEGIN------------*/
+@font-face {
+    font-family: "Decker";
+    src: url('fonts/decker/Decker.ttf'), 
+        url('fonts/decker/DeckerB.eot');
+}
+@font-face {
+    font-family: "Decker";
+    src: url('fonts/decker/Decker.ttf'), 
+        url('fonts/decker/DeckerB.eot');
+    font-weight: bold;
+}
+/*CONFIG - END--------------*/
+
+/*RESET - BEGIN-------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Decker, Verdana, Arial, sans-serif;
+    color: white;
+    font-size: 18px;
+}
+ul {
+    list-style: none;
+}
+/*RESET - END---------------*/
+
+
+/*BODY - BEGIN--------------*/
+body {
+    background-color: #222;
+}
+/*BODY - END----------------*/
+
+
+/*GENERAL - BEGIN*/
+.clear {
+    clear: both;
+}
+.left-float {
+    float: left;
+}
+.right-float {
+    float: right;
+}
+input[type="search"],
+input[type="password"],
+input[type="text"],
+input[type="email"],
+textarea {
+    color: #111;
+}
+/*GENERAL - END*/
+
+
+/*HEADER - BEGIN------------*/
+/*MENU - BEGIN--------------*/
+header .menu a {
+    text-decoration: none;
+    display: inline-block;
+}
+header .menu a:hover {
+    background-color: #69BB00;
+}
+header .menu ul {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+header .menu li > ul > li > a {
+    width: 100%;
+    box-sizing: content-box;
+    padding: .2em .4em;
+}
+header .menu li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .7s ease-in;
+    -webkit-transition: opacity .7s ease-in;
+    -o-transition: opacity .7s ease-in;
+    -moz-transition: opacity .7s ease-in;
+}
+header .menu > li {
+    position: relative;
+    float: left;
+}
+header .menu > li > a {
+    line-height: 3em;
+    padding: 0 1em;
+    height: 3em;
+}
+
+header .search-field-wrapper {
+    line-height: 3em;
+    padding: 0 2em;
+}
+header .search-field-wrapper input[type="search"] {
+    width: 300px;
+    height: 34px;
+    padding: 0 .2em;
+}
+
+header .account-nav {
+    line-height: 3em;
+}
+header .account-nav button {
+    border: 0;
+    margin: 0;
+    height: 3em;
+    padding: 0 1em;
+    background-color: #396600;
+    float: right;
+    margin-left: .2em;
+    cursor: pointer;
+}
+header .account-nav button:hover {
+    background-color: #69BB00;
+}
+    
+/*MENU - END----------------*/
+/*HEADER - END--------------*/
