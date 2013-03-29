@@ -2,11 +2,11 @@
 @font-face {
     font-family: "Decker";
     src: url('fonts/decker/Decker.ttf'), 
-        url('fonts/decker/DeckerB.eot');
+        url('fonts/decker/Decker.eot');
 }
 @font-face {
     font-family: "Decker";
-    src: url('fonts/decker/Decker.ttf'), 
+    src: url('fonts/decker/DeckerB.ttf'), 
         url('fonts/decker/DeckerB.eot');
     font-weight: bold;
 }
@@ -53,10 +53,17 @@ input[type="email"],
 textarea {
     color: #111;
 }
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
 /*GENERAL - END*/
 
 
 /*HEADER - BEGIN------------*/
+header {
+    margin-bottom: 2em;
+}
 /*MENU - BEGIN--------------*/
 header .menu a {
     text-decoration: none;
@@ -69,11 +76,14 @@ header .menu ul {
     position: absolute;
     opacity: 0;
     visibility: hidden;
+    background-color: #222;
+}
+header .menu li > ul > li {
+    /*box-sizing: content-box;
+    padding: .2em .4em;*/
 }
 header .menu li > ul > li > a {
     width: 100%;
-    box-sizing: content-box;
-    padding: .2em .4em;
 }
 header .menu li:hover > ul {
     opacity: 1;
@@ -92,17 +102,21 @@ header .menu > li > a {
     padding: 0 1em;
     height: 3em;
 }
+/*MENU - END----------------*/
 
+/*SEARCH - BEGIN------------*/
 header .search-field-wrapper {
     line-height: 3em;
     padding: 0 2em;
 }
 header .search-field-wrapper input[type="search"] {
     width: 300px;
-    height: 34px;
+    height: 2em;
     padding: 0 .2em;
 }
+/*SEARCH - END--------------*/
 
+/*ACCOUNT - BEGIN-----------*/
 header .account-nav {
     line-height: 3em;
 }
@@ -119,6 +133,8 @@ header .account-nav button {
 header .account-nav button:hover {
     background-color: #69BB00;
 }
-    
-/*MENU - END----------------*/
+/*ACCOUNT - END-------------*/
 /*HEADER - END--------------*/
+
+/*CONTENT - BEGIN-----------*/
+/*CONTENT - END-------------*/
