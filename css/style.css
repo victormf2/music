@@ -37,6 +37,9 @@ body {
 
 
 /*GENERAL - BEGIN*/
+.hidden {
+    visibility: hidden;
+}
 .clear {
     clear: both;
 }
@@ -137,4 +140,9 @@ header .account-nav button:hover {
 /*HEADER - END--------------*/
 
 /*CONTENT - BEGIN-----------*/
+.music-list-article li {
+}
+.music-list-article li > img {
+    height: 280px;
+}
 /*CONTENT - END-------------*/

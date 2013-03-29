@@ -1,3 +1,4 @@
 .css-slider {
     overflow: hidden;
+    position: relative;
 }
