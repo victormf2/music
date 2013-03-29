@@ -31,7 +31,7 @@
                 $ul.css({
                     height: height + 'px',
                     width: ($lis.length * itemWidth + 2 * itemWidth) + 'px',
-                    transition: 'left ' + duration + 's, right ' + duration + 's'
+                    transition: 'transform ' + duration + 's'
                 }).wrap('<div></div>').parent().addClass('css-slider').css('width', width + 'px');
                 $ul.addClass('css-slider').show().css({visibility: 'visible'})
                         .data('css-slider.limit', $lis.length - settings.show);
@@ -53,10 +53,10 @@
                     case 'next':
                         if (!settings.cyclic) {
                             var limit = $ul.data('css-slider.limit');
-                            var position = Math.abs($ul.position().left);
+                            var position = matrixToArray($ul.css('transform'))[4];
                             var hiddens = position / settings.itemWidth;
                             var nextPosition = hiddens >= limit ? 0 : position + settings.itemWidth;
-                            $ul.css('left', '-' + nextPosition + 'px');
+                            $ul.css('transform', 'translateX(-' + nextPosition + 'px)');
                         } else {
                             var $last = $lis.filter(':last');
                             var $firsts = $lis.slice(0, step);
@@ -106,4 +106,8 @@
             $.error('Method ' + method + ' does not exist on jQuery.cssSlider');
         }
     };
+    
+    function matrixToArray(matrix) {
+        return matrix.replace(/[^\d,-.]/gi, '').split(',');
+    }
 })(jQuery);
