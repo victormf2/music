@@ -32,6 +32,9 @@ ul {
 /*BODY - BEGIN--------------*/
 body {
     background-color: #222;
+    top: 0;
+    position: absolute;
+    width: 100%;
 }
 /*BODY - END----------------*/
 
@@ -162,6 +165,7 @@ header .account-nav button:hover {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    background-size: 180px;
 }
 .music-list-article li:hover > div {
     transition: opacity .4s;

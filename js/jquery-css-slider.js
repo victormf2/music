@@ -31,6 +31,9 @@
                 $ul.css({
                     height: height + 'px',
                     width: ($lis.length * itemWidth + 2 * itemWidth) + 'px',
+                    '-webkit-transition': '-webkit-transform ' + duration + 's',
+                    '-moz-transition': '-moz-transform ' + duration + 's',
+                    '-o-transition': '-o-transform ' + duration + 's',
                     transition: 'transform ' + duration + 's'
                 }).wrap('<div></div>').parent().addClass('css-slider').css('width', width + 'px');
                 $ul.addClass('css-slider').show().css({visibility: 'visible'})
@@ -53,7 +56,8 @@
                     case 'next':
                         if (!settings.cyclic) {
                             var limit = $ul.data('css-slider.limit');
-                            var position = matrixToArray($ul.css('transform'))[4];
+                            var position = Math.abs(matrixToArray($ul.css('transform'))[4]);
+                            if (isNaN(position)) position = 0;
                             var hiddens = position / settings.itemWidth;
                             var nextPosition = hiddens >= limit ? 0 : position + settings.itemWidth;
                             $ul.css('transform', 'translateX(-' + nextPosition + 'px)');
